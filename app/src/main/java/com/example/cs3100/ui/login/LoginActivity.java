@@ -21,8 +21,11 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
+import android.view.View;
 
 import com.example.cs3100.R;
+import com.example.cs3100.mainapp.MainActivity;
 import com.example.cs3100.ui.login.LoginViewModel;
 import com.example.cs3100.ui.login.LoginViewModelFactory;
 
@@ -115,6 +118,7 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
             }
         });
     }
