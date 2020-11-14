@@ -23,8 +23,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 import android.view.View;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.cs3100.R;
+import com.example.cs3100.data.model.CreateListing;
 import com.example.cs3100.mainapp.MainActivity;
 import com.example.cs3100.ui.login.LoginViewModel;
 import com.example.cs3100.ui.login.LoginViewModelFactory;
@@ -44,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        final Button testing1 = findViewById(R.id.testing1);
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
@@ -78,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Complete and destroy login activity once successful
                 finish();
+
             }
         });
 
@@ -121,7 +124,23 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
             }
         });
+
+
+        testing1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this, "Please enter an End for your event!", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(LoginActivity.this, CreateListing.class));
+            }
+        });
+
+
+
+
     }
+
+
 
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();

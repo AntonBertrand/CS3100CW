@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "608350516887",
+    "firebase_url": "https://jobseek-68e15.firebaseio.com",
+    "project_id": "jobseek-68e15",
+    "storage_bucket": "jobseek-68e15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608350516887:android:a6c8dd3b202bbf04f59bd2",
+        "android_client_info": {
+          "package_name": "com.example.cs3100"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608350516887-f9olemiurd1u4nad8oc4v8f43rh57mh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxIiUmlyulSOnFl5dHw1OWFBYK8LLi-Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608350516887-f9olemiurd1u4nad8oc4v8f43rh57mh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
